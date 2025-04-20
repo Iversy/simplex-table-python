@@ -6,7 +6,7 @@ Index = int
 
 
 class Simplex:
-    def __init__(self, matrix: np.ndarray[np.ndarray[float]]):
+    def __init__(self, matrix: np.ndarray[np.ndarray[int|float|Fraction]]):
         self.matrix = matrix.astype(Fraction)
         self.n = matrix.shape[1]-1
         self.m = matrix.shape[0]-1
