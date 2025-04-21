@@ -32,7 +32,7 @@ class Simplex:
             else:
                 a.append(np.inf)
         self.current_state = np.array(a)
-        if np.all(self.current_state != np.inf):
+        if np.all([i>=np.inf for i in self.current_state]):
             return None, None
         return (np.argmin(self.current_state),col_index)
     
